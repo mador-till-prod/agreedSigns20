@@ -29,13 +29,24 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to bottom right, rgb(205, 76, 42), rgb(249, 197, 33));
-    background-repeat: no-repeat;
+    /* background-image: linear-gradient(to bottom right, rgb(205, 76, 42), rgb(249, 197, 33)); */
+    /* background-repeat: no-repeat; */
     direction: rtl;
     color: white;
     font-family: Rubik;
-    overflow: hidden;
+    overflow: auto;
     margin: 0;
+}
+
+.bg-color {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(205, 76, 42), rgb(249, 197, 33));
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
 }
 
 .opening {
@@ -185,6 +196,10 @@ body {
     font-weight: bold;
 }
 
+.overflow {
+    overflow: scroll;
+}
+
 .content {
     text-align: center;
 } 
@@ -255,7 +270,7 @@ body {
 
 .next, .go-to-exer {
     width: 10%;
-    position: absolute;
+    position: fixed;
     bottom: 3%;
     left: 5%;
 }
@@ -382,10 +397,12 @@ body {
 .part1-exer>div>img:not(.next), .part2-exer>div>img:not(.next) {
     width: 24%;
     margin: 1%;
+    
 }
 
 .page1-exer>div {
     margin-bottom: 4%;
+    height: 80%;
 }
 
 .page2-exer {
@@ -517,14 +534,13 @@ body {
 }
 
 .part3-exer>.page2-exer>.road {
-    background-image: url(assets/images/exer-background.svg);
+    background-image: url("assets/images/exer-background.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 70%;
     margin-top: 0;
     padding: 7%;
     padding-top: 20%;
-    padding-left: 10%;
     transform: translateY(-17%);
 }
 
@@ -578,7 +594,7 @@ body {
 }
 
 .road>.answer4 {
-    transform: translate(-192%, 117%);
+    transform: translate(23%, 110%);
 }
 
 .check {
